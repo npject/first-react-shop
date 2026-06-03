@@ -12,7 +12,7 @@ export async function loader({ params }) {
 }
 
 function SingleProduct() {
-    const { count,changeProduct } = useContext(ProductsContext);
+    const { changeProduct } = useContext(ProductsContext);
     const [message,setMessage] = useState('');
     const alertRef = useRef();
 

@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Cart (){
     const [itemsCart,setItemsCart] = useState([]);
-    const { count,changeProduct } = useContext(ProductsContext);
+    const { changeProduct } = useContext(ProductsContext);
 
     useEffect(() =>{
-        setItemsCart(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartitems')) : []);
+        setItemsCart(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []);
     },[]);
     const removeItem = (idItem)=>{
         let newItems = itemsCart.filter(product=> product.id != idItem);

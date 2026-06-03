@@ -4,7 +4,7 @@ import Loading from '../share/loading';
 import { ProductsContext } from "../context/productsContext";
 
 function Products() {
-    const { count,changeProduct } = useContext(ProductsContext);
+    const { changeProduct } = useContext(ProductsContext);
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -17,7 +17,7 @@ function Products() {
     };
     useEffect(() => {
         getData();
-        changeProduct(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : 0);
+        changeProduct(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')).length : 0);
         //const isData = true;
         return () => {
             //isData = false;

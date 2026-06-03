@@ -9,7 +9,7 @@ function Header() {
     console.log(color);
     const { count,changeProduct } = useContext(ProductsContext);
     useEffect(() => {
-        changeProduct(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : 0);
+        changeProduct(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')).length : 0);
     },[]);
 
     return (
