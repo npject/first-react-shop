@@ -20,8 +20,9 @@ function Header() {
                 <ul className='navbar-nav'>
                     <li className='nav-item d-flex align-items-center'>
                         <div className='form-check form-switch'>
-                          <label className="form-check-label" for="input-theme">
-                            <i className={`fa-solid ${color == 'light' ? 'fa-moon' : 'fa-sun text-light'}`}></i>
+                          <label className="form-check-label" htmlFor="input-theme">
+                            <FontAwesomeIcon icon={`fa-solid ${color === 'light' ? 'fa-moon' : 'fa-sun'}`}
+                             className={color === 'light' ? 'text-dark' : 'text-light'}></FontAwesomeIcon>
                           </label>
                             <input className='form-check-input' type='checkbox' id='input-theme'
                           onClick={()=> changeColor(`${color=='light' ? 'dark' : 'light'}`)}></input>

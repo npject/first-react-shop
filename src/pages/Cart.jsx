@@ -1,5 +1,6 @@
 import { useState,useEffect,useContext } from 'react';
 import { ProductsContext } from "../context/productsContext";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Cart (){
     const [itemsCart,setItemsCart] = useState([]);
@@ -25,8 +26,8 @@ function Cart (){
                             <div className='card-body'>
                                 <h5 className='card-title text-truncate'>{item.title}</h5>
                                 <p className='card-text text-danger'>price: {item.price}$</p>
-                                <i className='fa-solid fa-trash bg-danger'
-                                 onClick={() => removeItem(item.id)}></i>
+                                <FontAwesomeIcon icon="fa-solid fa-trash" className='text-danger'
+                                 onClick={() => removeItem(item.id)}></FontAwesomeIcon>
                             </div>
                         </div>
                     </div>
