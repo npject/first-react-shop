@@ -19,11 +19,11 @@ function SingleProduct() {
     const { response } = useLoaderData();
     const [cartItems,setCartItems] = useState(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []);
     const addToCart = (item)=> {
-        const isProductsInCart = cartItems.find((cartItem) => cartItem.id == item.id);
+        const isProductsInCart = cartItems.find((cartItem) => cartItem.id === item.id);
         if(isProductsInCart){
             setCartItems(
                 cartItems.map((cartItem)=>
-                    cartItem.id == item.id ? {...cartItem, quantity: cartItem.quantity +1} : cartItem 
+                    cartItem.id === item.id ? {...cartItem, quantity: cartItem.quantity +1} : cartItem 
                 )
             )
         }else{

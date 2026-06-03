@@ -10,7 +10,7 @@ function Cart (){
         setItemsCart(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []);
     },[]);
     const removeItem = (idItem)=>{
-        let newItems = itemsCart.filter(product=> product.id != idItem);
+        let newItems = itemsCart.filter(product=> product.id !== idItem);
         setItemsCart(newItems);
         localStorage.setItem('cartItems',JSON.stringify(newItems));
         changeProduct(newItems.length);

@@ -13,8 +13,8 @@ function Header() {
     },[]);
 
     return (
-        <nav className={`navbar navbar-expand-lg ${color == 'light' ? 'bg-body-tertiary' : 'bg-dark'}`}
-         data-bs-theme={`${color == 'light' ? 'light' : 'dark'}`}>
+        <nav className={`navbar navbar-expand-lg ${color === 'light' ? 'bg-body-tertiary' : 'bg-dark'}`}
+         data-bs-theme={`${color === 'light' ? 'light' : 'dark'}`}>
             <div className='container'>
                 <a className='navbar-brand' href='#'>navbar</a>
                 <ul className='navbar-nav'>
@@ -25,7 +25,7 @@ function Header() {
                              className={color === 'light' ? 'text-dark' : 'text-light'}></FontAwesomeIcon>
                           </label>
                             <input className='form-check-input' type='checkbox' id='input-theme'
-                          onClick={()=> changeColor(`${color=='light' ? 'dark' : 'light'}`)}></input>
+                          onClick={()=> changeColor(`${color==='light' ? 'dark' : 'light'}`)}></input>
                         </div> 
                     </li>
                     <li className='nav-item'><NavLink
@@ -36,7 +36,7 @@ function Header() {
                         to='/shop'>Products</NavLink></li>
                     <li className='nav-item d-flex align-items-center position-relative'>
                         <NavLink to='/cart'>
-                        <FontAwesomeIcon icon="fa-solid fa-shopping-cart" className={`mt-2 pt-1 ${color=='dark' ? 'text-light' : 'text-dark'}`}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon="fa-solid fa-shopping-cart" className={`mt-2 pt-1 ${color==='dark' ? 'text-light' : 'text-dark'}`}></FontAwesomeIcon>
                         <span className='badge position-absolute top-0 start-0 text-bg-danger rounded-pill'>
                             {count}
                         </span>
