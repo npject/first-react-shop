@@ -33,7 +33,7 @@ function Products() {
                         <div className='card' style={{ height: '300px' }} >
                             <Link to={`/shop/${item.id}`} target='_blank'>
                                 <img src={item.image} className='card-img-top object-fit-contain'
-                                    style={{ height: '200px' }} />
+                                    style={{ height: '200px' }} alt={item.title || 'image product'}/>
                             </Link>
                             <div className='card-body'>
                                 <h5 className='card-title text-truncate'>{item.title}</h5>

@@ -19,10 +19,10 @@ function Cart (){
         <>
             <div className='row'>
                 {itemsCart.length ? itemsCart.map(item =>
-                    <div className='col-12' key={item.id}>
-                        <div className='card' style={{ height: '300px' }} >
-                                <img src={item.image} className='card-img-top object-fit-contain'
-                                    style={{ height: '200px' }} />
+                    <div className='col-12 mb-3' key={item.id}>
+                        <div className='card' style={{ height: '320px' }} >
+                                <img src={item.image} className='card-img-left object-fit-contain'
+                                    style={{ height: '200px' }} alt={item.title || 'image product'}/>
                             <div className='card-body'>
                                 <h5 className='card-title text-truncate'>{item.title}</h5>
                                 <p className='card-text text-danger'>price: {item.price}$</p>

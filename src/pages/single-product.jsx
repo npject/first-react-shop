@@ -54,7 +54,7 @@ function SingleProduct() {
                 <div className='col-lg-8 mx-auto mb-2'>
                     <div className='card' style={{ height: '500px' }} >
                         <img src={response.image} className='card-img-top object-fit-contain'
-                            style={{ height: '300px' }} />
+                            style={{ height: '300px' }} alt={response.title || 'image product'}/>
                         <div className='card-body'>
                             <h5 className='card-title'>{response.title}</h5>
                             <p className='card-text text-danger'>price: {response.price}$</p>

@@ -16,7 +16,7 @@ function Header() {
         <nav className={`navbar navbar-expand-lg ${color === 'light' ? 'bg-body-tertiary' : 'bg-dark'}`}
          data-bs-theme={`${color === 'light' ? 'light' : 'dark'}`}>
             <div className='container'>
-                <a className='navbar-brand' href='#'>navbar</a>
+                <NavLink className='navbar-brand' to='/'>navbar</NavLink>
                 <ul className='navbar-nav'>
                     <li className='nav-item d-flex align-items-center'>
                         <div className='form-check form-switch'>
